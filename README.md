@@ -1,5 +1,9 @@
 # load_store_insert
 
+- LLVM Pass: llvm_insert.cpp
+- Test File: test.c
+- Final Executable after compiling test.c: instrumented_program
+
 # Process execute this program in Docker
 
 ## Step 1: Build the Docker Image (using the Dockerfile)

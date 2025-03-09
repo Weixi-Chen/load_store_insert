@@ -5,7 +5,7 @@
 - Final Executable after compiling test.c: **instrumented_program**
 
 # Program Description
-The program **llvm_insert.cpp** inserts **Print** statement before every Load and Store in the LLVM IR (Low-Level Virtual Machine Intermediate Representation) level.
+The program **llvm_insert.cpp** inserts **Print** statement before every Load and Store in the LLVM IR (Low-Level Virtual Machine Intermediate Representation) level before generating executable.
 
 # Process execute this program in Docker
 
@@ -21,7 +21,7 @@ docker run -it -v $(pwd):/app llvm-env
 ```sh
 clang++ -fPIC -shared -o InstrumentLoadStore.so llvm_insert.cpp $(llvm-config --cxxflags --ldflags --system-libs --libs core)
 ```
-Compiles llvm_insert.cpp -> InstrumentLoadStore.so (LLVM Pass Library)
+Compiles llvm_insert.cpp -> InstrumentLoadStore.so (LLVM Pass, in Shared Object file)
 
 ## Step 4: Generate LLVM IR (with optone disabled, allowing optimization passes)
 ``` sh

@@ -24,8 +24,5 @@ WORKDIR /app
 VOLUME ["/app"]
 WORKDIR /app
 
-# Compile the program
-RUN g++ -g llvm.cpp -o llvm $(llvm-config --cxxflags --ldflags --system-libs --libs)
-
 # Set default command to bash (so you can interact with the container)
 CMD ["/bin/bash"]
